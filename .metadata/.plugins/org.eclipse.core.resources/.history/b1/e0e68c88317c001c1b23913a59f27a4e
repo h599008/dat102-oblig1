@@ -1,0 +1,12 @@
+
+public class ArrayBag<T> implements BagInterface{
+	private final T[] bag;
+	private int numberOfEntries;
+	private static final int DEFAULT_CAPACITY = 25;
+	
+	
+	public ArrayBag() {
+		this.numberOfEntries = 0;
+		this.bag = (T[])new Object[DEFAULT_CAPACITY];
+	}
+}

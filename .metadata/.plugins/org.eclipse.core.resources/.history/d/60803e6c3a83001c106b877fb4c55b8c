@@ -1,0 +1,101 @@
+package no.hvl.data102;
+import no.hvl.data102.adt.FilmarkivADT;
+
+public class Filmarkiv2 implements FilmarkivADT {
+	private int antall;
+	private LinearNode<Film> start;
+	private int gittStorrelse;
+	
+	public Filmarkiv2(int storrelse) {
+		this.antall = 0;
+		this.gittStorrelse = storrelse; 
+	}
+	
+	public Film visFilm(int nr) {
+		LinearNode<Film> film = null;
+		LinearNode<Film> current = start;
+		boolean funnet = false;
+		
+		for (int i=0; i < this.antall && !funnet; i++) {
+			if (current.getElement().getFilmNr() == nr) {
+				funnet = true;
+				film = current;
+			} else {
+				current = current.getNeste();
+			}
+		}
+		
+		return film.getElement();
+	}
+	
+	public void leggTilFilm(Film film) {
+		LinearNode<Film> node = new LinearNode<Film>(film);
+		node.setNeste(start);
+		start = node;
+		antall++;
+	}
+	
+	public boolean slettFilm(int nr) {
+		boolean result = false;
+		LinearNode<Film> current = start;
+		
+		for (int i=0; i < antall; i++) {
+			if (current.getElement().getFilmNr() == nr) {
+				current = current.getNeste();
+				result = true;
+			} else {
+				current = current.getNeste();
+			}
+		}
+		return result;
+	}
+	
+	public Film[] sokTittel(String streng) {
+		
+		LinearNode<Film> current = start;
+		Film[] result = new Film[antall];
+		int index = 0;
+		
+		for (int i=0; i < antall; i++) {
+			if (current.getElement().getTittel().contains(streng)) {
+				result[i] = current.getElement();
+				index++;
+			} else {
+				current = current.getNeste();
+			}
+		}
+		// Returnerer liste med Film-objekter etter trim-metoden har fjernet alle 'null' verdier.
+		return(trim(result, index));
+	}
+	
+	
+	private Film[] trim(Film[] filmTabell, int index) {
+		// Loop pa nytt med tabell kun plass til antall filmer i tabellen i param.
+		Film[] nyTabell = new Film[index];
+		for (int i=0; i < filmTabell.length; i++) {
+			nyTabell[i] = filmTabell[i];
+		}
+		return nyTabell;
+		
+	}
+	
+	public int antall() {
+		return this.antall;
+	}
+	
+	public int antall(Sjanger sjanger) {
+		int antall = 0;
+		
+		LinearNode<Film> current = start;
+		
+		for (int i=0; i < antall; i++) {
+			if (current.getElement().getSjanger().equals(sjanger)) {
+				antall++;
+			} else {
+				current = current.getNeste();
+			}
+		}
+
+		return antall;
+	}	
+}

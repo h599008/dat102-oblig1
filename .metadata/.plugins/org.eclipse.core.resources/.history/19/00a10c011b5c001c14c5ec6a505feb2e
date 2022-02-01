@@ -1,0 +1,38 @@
+package no.hvl.dat100;
+
+public class Student {
+	private String name;
+	private int age;
+	private Course[] courses;
+	private int enrolled_courses;
+	private static int max_courses;
+	private double bank;
+	
+	public Student(String name, int age, double bank) {
+		this.name = name;
+		this.age = age;
+		this.bank = bank;
+		this.max_courses = 5;
+		this.enrolled_courses = 0;
+		this.courses = new Course[this.max_courses];
+	}
+	
+	public boolean addCourse(Course course) {
+		boolean result = false;
+		String string_result = "Beklager, for mange kurs eller for lite cash.";
+		if (enrolled_courses < max_courses && course.getFee() <= bank) {
+			courses[enrolled_courses] = course;
+			result = true;
+			string_result = "Wooohoo, studenten, " + name + " la til, " + course.getName() + " som kurs.";
+		}
+		
+		System.out.println(string_result);
+		return result;
+		
+	}
+	
+	public Course[] getCourses() {
+		return courses;
+	}
+	
+}

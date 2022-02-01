@@ -1,0 +1,15 @@
+package no.hvl.dat102.kjedet;
+
+public class Main {
+	
+	private Integer a = 1;
+	private Integer b = 2;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		KjedetKoe<Integer> koe = new KjedetKoe();
+		koe.innKoe(a);
+		
+	}
+
+}

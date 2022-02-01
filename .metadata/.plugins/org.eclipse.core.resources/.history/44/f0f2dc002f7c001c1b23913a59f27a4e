@@ -1,0 +1,7 @@
+
+public class ArrayBag<T> implements SetInterface{
+	private final T
+	public ArrayBag() {
+		
+	}
+}

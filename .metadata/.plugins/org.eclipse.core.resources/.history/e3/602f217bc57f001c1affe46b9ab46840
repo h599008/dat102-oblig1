@@ -1,0 +1,18 @@
+package no.hvl.dat102.kjedet;
+import no.hvl.dat102.adt.KoeADT;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.Test;
+
+public class KjedetKoeTest {
+	
+	KoeADT koe = new KjedetKoe();
+	
+	@Test
+	public void testInnKoe() {
+		int a = 1;
+		assertEquals(a, 1);
+	}
+}

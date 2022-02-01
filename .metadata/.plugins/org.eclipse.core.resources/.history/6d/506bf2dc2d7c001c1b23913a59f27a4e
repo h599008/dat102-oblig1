@@ -1,0 +1,7 @@
+public interface SetInterface<T>{
+	public T getFirst();
+	public T getLast();
+	
+	public void changeOrder();
+	
+}

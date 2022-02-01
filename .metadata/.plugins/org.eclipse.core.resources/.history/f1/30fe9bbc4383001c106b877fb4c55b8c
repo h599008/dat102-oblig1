@@ -1,0 +1,38 @@
+package no.hvl.data102.klient;
+import no.hvl.data102.adt.*;
+import no.hvl.data102.*;
+
+public class Meny {
+	private Tekstgrensesnitt tekstgr;
+	private FilmarkivADT filmarkiv;
+	
+	public Meny(FilmarkivADT filmarkiv) {
+		this.filmarkiv = filmarkiv;
+		this.tekstgr = new Tekstgrensesnitt();
+		Film filmFraInput = tekstgr.lesFilm();
+		this.filmarkiv.leggTilFilm(filmFraInput);	
+		
+		System.out.println("Film lagt inn av bruker:");
+		tekstgr.visFilm(filmFraInput);
+		
+		// Skriver ut filmer med produsent gitt som parameter.
+		tekstgr.skrivUtFilmProdusent(filmarkiv, "Mateo");
+		System.out.println();
+		
+	}
+	
+	public void start() {
+		Film film2 = new Film(2, "Tom Hanks", "Hanks's film", 1995, Sjanger.HISTORY, "Universial Films");
+		Film film3 = new Film(3, "Aksel Hennie", "UNO", 2005, Sjanger.ACTION, "Norsk Film");
+		Film film4 = new Film(4, "George Lucas", "Star Wars episode 1", 2007, Sjanger.ACTION, "Universial Films");
+		
+		this.filmarkiv.leggTilFilm(film2);
+		this.filmarkiv.leggTilFilm(film3);
+		this.filmarkiv.leggTilFilm(film4);
+		
+		
+		
+		System.out.println("Filmstatistikk:");
+		this.tekstgr.skrivUtStatistikk(this.filmarkiv);
+	}
+}

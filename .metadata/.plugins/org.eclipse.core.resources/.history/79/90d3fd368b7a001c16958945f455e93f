@@ -1,0 +1,9 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		OrderedPair<String> fruit = new OrderedPair<>("apple", "banana");
+		
+	}
+
+}

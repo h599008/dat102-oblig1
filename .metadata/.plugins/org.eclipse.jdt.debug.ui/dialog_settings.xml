@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth0" value="60"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth1" value="615"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth2" value="84"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.sortColumn" value="1"/>
+	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode&gt;=dat100-javainnlevering2/\/app\/eclipse\/plugins\/org.junit_4.13.0.v20200204-1500.jar&amp;lt;org.junit.runner(JUnitCore.class[JUnitCore&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=dat100-prosjekt-startkode-2021/src&amp;lt;no.hvl.dat100.prosjekt.main{VriOtteSpil.java[VriOtteSpil&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=oving2/src&amp;lt;no.hvl.data102.klient{KlientFilmarkiv.java[KlientFilmarkiv&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=KoeT/src&amp;lt;no.hvl.dat102.klienter{BillettKoe.java[BillettKoe&lt;/infoNode&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_X_ORIGIN" value="343"/>
+			<item key="DIALOG_Y_ORIGIN" value="143"/>
+			<item key="DIALOG_FONT_NAME" value="1|Fira Sans|10.0|0|GTK|1|"/>
+		</section>
+	</section>
+	<section name="expressionHistory">
+	</section>
+	<section name="org.eclipse.jdt.internal.debug.ui.ExpressionInformationControlCreator$ExpressionInformationControl">
+		<item key="WIDTH" value="606"/>
+		<item key="HEIGHT" value="198"/>
+		<item key="SashWeightTree" value="878"/>
+		<item key="SashWeightDetails" value="121"/>
+	</section>
+	<section name="conditionHistory">
+	</section>
+</section>

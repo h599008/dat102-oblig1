@@ -1,0 +1,24 @@
+
+public class OrderedPair<T> implements SetInterface<T> {
+	private T first, second;
+	
+	public OrderedPair(T firstItem, T secondItem) {
+		this.first = firstItem;
+		this.second = secondItem;
+	}
+	
+	public T getFirst() {
+		return this.first;
+	}
+	
+	public T getLast() {
+		return this.second;
+	}
+	
+	public void changeOrder() {
+		T temp = this.first;
+		this.second = this.first;
+		this.first = temp;
+	}
+	
+}
