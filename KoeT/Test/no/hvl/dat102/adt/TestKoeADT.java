@@ -25,6 +25,7 @@ public abstract class TestKoeADT {
 	
 	@BeforeEach
 	public void setUp() {
+		// Setter alltid koe til en tom kø før hver test.
 		koe = new KjedetKoe<Integer>();
 	}
 	
@@ -59,10 +60,5 @@ public abstract class TestKoeADT {
 		
 		//assertEquals();
 	}
-
-
-
-
-
 
 }

@@ -13,4 +13,4 @@ public enum Sjanger {
 		}
 		return sjang;
 	}
-}// class
+}

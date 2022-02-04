@@ -112,9 +112,8 @@ public class Filmarkiv2 implements FilmarkivADT {
 			
 			current = current.getNeste();
 		}
-		
-		return trim(filmer, index);
-		
+	
+		return filmer;		
 	} 
 
 

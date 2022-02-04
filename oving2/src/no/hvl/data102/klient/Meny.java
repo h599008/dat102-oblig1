@@ -19,6 +19,7 @@ public class Meny {
 		// Skriver ut filmen som nettopp ble satt inn av bruker.
 		System.out.println("Film lagt inn av bruker:");
 		tekstgr.visFilm(filmFraInput);
+		System.out.println();
 		
 	}
 	
@@ -31,7 +32,7 @@ public class Meny {
 		this.filmarkiv.leggTilFilm(film2);
 		this.filmarkiv.leggTilFilm(film3);
 		this.filmarkiv.leggTilFilm(film4);
-		
+				
 		// Skriver ut filmstatistikk.
 		System.out.println("Filmstatistikk:");
 		this.tekstgr.skrivUtStatistikk(this.filmarkiv);

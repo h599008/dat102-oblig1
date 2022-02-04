@@ -50,9 +50,6 @@ public interface FilmarkivADT {
 	  * @param produsent
 	  * @return
 	  */
-	 
-	 Film[] avProdusent(String produsent);
-	 
-	 
+	 Film[] avProdusent(String produsent);	 
 }
 

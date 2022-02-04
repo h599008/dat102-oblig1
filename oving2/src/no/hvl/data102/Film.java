@@ -9,6 +9,11 @@ public class Film {
 	private Sjanger sjanger;
 	private String selskap;
 	
+	public Film() {	
+		// Oppretter et tomt objekt.
+	}
+	
+	// Oppretter et objekt med objektvariablene gitt ved parametere. 
 	public Film(int filmNr, String produsent, String tittel, int pub_dato, Sjanger sjanger, String selskap) {
 		this.filmNr = filmNr;
 		this.produsent = produsent;
@@ -70,11 +75,17 @@ public class Film {
 		return this.sjanger;
 	}
 	
-	
-	public boolean equals(Film a, Film b) {
+		
+	// Denne må kalles fra et film objekt og sammenlignes med et annet. 
+	@Override
+	public boolean equals(Object a) {
 		boolean result = false;
-		if (a.getFilmNr() == b.getFilmNr()) {
-			result = true;
+		
+		if (a instanceof Film) {
+			Film film = (Film) a;
+			if (this.filmNr == film.getFilmNr()) {
+				result = true;
+			} 
 		}
 	
 		return result;

@@ -84,6 +84,7 @@ public class Tekstgrensesnitt {
 			if (i != null) {
 				System.out.println("Film av: " + produsent);
 				System.out.println(i.toString());
+				System.out.println();
 			}
 		}
 	}

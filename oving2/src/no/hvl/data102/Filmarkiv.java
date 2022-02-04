@@ -14,7 +14,6 @@ public class Filmarkiv implements FilmarkivADT {
 		this.gittStorrelse = storrelse; 
 	}
 	
-	@Override
 	public Film visFilm(int nr) {
 		Film result = null;
 		
@@ -30,7 +29,6 @@ public class Filmarkiv implements FilmarkivADT {
 		return result;
 	}
 	
-	@Override
 	public void leggTilFilm(Film film) {
 		if (this.antall < this.gittStorrelse) {
 			this.arkiv[this.antall] = film;
@@ -52,7 +50,6 @@ public class Filmarkiv implements FilmarkivADT {
 		
 	}
 	
-	@Override
 	public boolean slettFilm(int nr) {
 		boolean result = false;
 		
@@ -77,7 +74,7 @@ public class Filmarkiv implements FilmarkivADT {
 				index++;
 			}
 		}
-		
+		// Trimmer tabellen for å fjerne alle 'null' verdier.
 		this.arkiv = trim(nyListe, index);
 		
 		return this.arkiv;
@@ -93,7 +90,6 @@ public class Filmarkiv implements FilmarkivADT {
 		
 	}
 	
-	@Override
 	public int antall() {
 		int antall = 0;
 		
@@ -105,7 +101,6 @@ public class Filmarkiv implements FilmarkivADT {
 		return antall;
 	}
 	
-	@Override
 	public int antall(Sjanger sjanger) {
 		int antallSjanger = 0;
 		for (Film i : this.arkiv) {
@@ -121,7 +116,6 @@ public class Filmarkiv implements FilmarkivADT {
 
 
 	// La til denne fordi fikk ikke til skrivUtFilmProdusent() i TekstGrensessnitt uten.
-	@Override
 	public Film[] avProdusent(String produsent) {
 		Film[] result = new Film[this.antall];
 		
